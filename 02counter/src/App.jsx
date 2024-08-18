@@ -8,7 +8,22 @@ function App() {
   const addValue = ()=>{
     console.log('valued added : ', counter)
     if(counter < 20){
-      setCounter(counter + 1)
+
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+      // setCounter(counter + 1)
+
+      //setCounter(()=>{}) //call back function 
+
+      //prevCounter is previous state 
+
+      setCounter(prevCounter=> prevCounter +1);
+      setCounter(prevCounter=> prevCounter +1);
+      setCounter(prevCounter=> prevCounter +1);
+      setCounter(prevCounter=> prevCounter +1);
+
+
     }
   }
 
@@ -20,6 +35,7 @@ function App() {
 
   return (
     <>
+    
     <h1>React Counter App : </h1>
     <h2> Counter Value : {counter}</h2>
     <button onClick={addValue}> Add Value  : {counter}</button> 
