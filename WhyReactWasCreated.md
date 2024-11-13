@@ -1,6 +1,6 @@
-# why to learn React??
+# Why to learn React??
 
--> hype, job, trend, build UI 
+-> Hype, Job, Trend, Build UI 
 -> Makes easy to manage & build complex front end 
 
 
