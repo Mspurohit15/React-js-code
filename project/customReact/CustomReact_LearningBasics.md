@@ -17,8 +17,6 @@ into using React's official libraries for a deeper understanding of its API.
 5. [React.createElement Explanation](#reactcreateelement-explanation)
 6. [Using React with `createRoot`](#using-react-with-createroot)
 7. [Things to Learn](#things-to-learn)
-8. [How to Run](#how-to-run)
-9. [Next Steps](#next-steps)
 
 ---
 
@@ -67,16 +65,105 @@ function customRender(reactElement, container) {
 }
 
 const reactElement = {
-    type: 'a',
-    props: {
+    type: 'a',                 // The HTML tag type (e.g., div, a, span).
+    props: {                   // Attributes like href, target, and children.
         href: 'https://google.com',
         target: '_blank'
     },
-    children: 'click me to visit google'
+    children: 'click me to visit google' // The inner text or nested elements.
 };
 
 const mainContainer = document.querySelector('#root');
 customRender(reactElement, mainContainer);
+
+```
+
+---
+
+## React Components and JSX
+
+Moving to React's official syntax, we use JSX for declarative component creation:
+```
+const anotherElement = (
+    <a href="https://google.com" target="_blank">
+        Visit Google
+    </a>
+);
+
+```
+---
+
+## JSX Advantages:
+
+- Cleaner syntax compared to manual object creation.
+- Directly maps to React.createElement calls under the hood.
+
+---
+
+## React.createElement Explanation
+
+React elements can be created manually without JSX:
+
+```
+const reactElement = React.createElement(
+    'a',
+    { href: 'https://google.com', target: '_blank' },
+    'Click me to visit Google'
+);
+```
+
+- This mimics the reactElement object used earlier:
+1. first Argument: The element type (e.g., 'a').
+2. Second Argument: Props (attributes like href and target).
+3. Third Argument: Content (children)
+
+   
+---
+
+## Using React with createRoot: 
+
+Transitioning to modern React:
+
+```
+import React, { StrictMode } from 'react';
+import { createRoot } from 'react-dom/client';
+import App from './App.jsx';
+
+createRoot(document.getElementById('root')).render(
+    <StrictMode>
+        <App />
+    </StrictMode>
+);
+
+```
+
+-  Key Points:
+1. createRoot: Initializes React rendering for your app.
+2. StrictMode: Helps identify potential issues in the application.
+
+   
+---
+
+
+
+## Things to Learn: 
+
+- Manual Rendering vs React
+- React Element Structure
+- Use declarative syntax for building components.
+- Know what happens behind the scenes when you use JSX.
+- Learn modern rendering methods like createRoot.
+
+- 
+
+
+
+
+
+
+
+
+
 
 
 
