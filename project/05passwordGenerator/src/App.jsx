@@ -81,10 +81,6 @@ function App() {
            />
            <label htmlFor='charInput'>Characters</label>
         </div>
-
-
-
-
       </div>
 
     </div>
